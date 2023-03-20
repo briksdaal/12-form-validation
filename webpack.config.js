@@ -10,11 +10,12 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Form Validation',
+      template: '!!handlebars-loader!./src/index.hbs',
     }),
   ],
   devServer: {
     static: './dist',
-    watchFiles: ['src/**/*.js', 'src/**/*.css'],
+    watchFiles: ['src/**/*.js', 'src/**/*.css', 'src/**/*.hbs'],
   },
   output: {
     filename: 'main.js',
