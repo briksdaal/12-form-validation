@@ -45,9 +45,9 @@ body {
 }
 
 .form-row {
-  height: 64px;
+  min-height: 80px;
   padding: 0 50px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .form-row:last-of-type {
@@ -90,14 +90,20 @@ button[type="submit"] {
 
 .error,
 .submit-msg {
+  max-width: 300px;
   font-size: 0.8rem;
   padding: 4px 0;
 }
 
-.error, .submit-msg.error {
+.error,
+.submit-msg.error {
   color: red;
 }
 
 .submit-msg {
   color: green;
+}
+
+.error[data-correction] {
+  cursor: pointer;
 }
